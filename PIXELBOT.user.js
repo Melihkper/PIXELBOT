@@ -18,7 +18,7 @@ function PixelBot() {
 
     PixelBot.url = {
         script: 'https://raw.githubusercontent.com/Melihkper/PIXELBOT/master/PIXELBOT.user.js',
-        image: 'https://raw.githubusercontent.com/Melihkper/PIXELBOT/master/rucar_def.png'
+        image: 'https://raw.githubusercontent.com/Melihkper/PIXELBOT/master/Rucar_def.png'
     };
 
     PixelBot.urlGen = {
