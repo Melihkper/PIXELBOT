@@ -17,7 +17,7 @@ function PixelBot() {
     }
 
     PixelBot.url = {
-        script: 'https://github.com/Melihkper/PIXELBOT/blob/master/PixelBot_KB.user_V2_2_2.js',
+        script: 'https://github.com/Melihkper/PIXELBOT/blob/master/PixelBot_KB.PIXELBOT.user.js',
         image: 'https://raw.githubusercontent.com/Melihkper/PIXELBOT/master/kebab.png'
     };
 
