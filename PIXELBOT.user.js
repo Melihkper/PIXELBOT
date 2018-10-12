@@ -43,7 +43,7 @@ function PixelBot() {
 
     PixelBot.state = document.createElement("div");
     PixelBot.state.onclick = PixelBot.reload;
-    PixelBot.state.textContent = "Загрузка приложения...";
+    PixelBot.state.textContent = "Г‡Г ГЈГ°ГіГ§ГЄГ  ГЇГ°ГЁГ«Г®Г¦ГҐГ­ГЁГї...";
     Object.assign(PixelBot.state.style, {
         background: "rgba(0,0,0,0.5)",
         bottom: "0px",
@@ -115,7 +115,7 @@ function PixelBot() {
                 .sort(function (a, b) { return b[0] - a[0]; });
 
             canvas = ctx = null;
-            PixelBot.setState("Перезагрузил зону защиты." + PixelBot.pixs.length + "px");
+            PixelBot.setState("ГЏГҐГ°ГҐГ§Г ГЈГ°ГіГ§ГЁГ« Г§Г®Г­Гі Г§Г Г№ГЁГІГ»." + PixelBot.pixs.length + "px");
         };
         PixelBot.img.src = PixelBot.urlGen.image();
         PixelBot.img2.src = "https://pixel.vkforms.ru/data/1.bmp?r=" + Math.random();
@@ -139,12 +139,12 @@ function PixelBot() {
         var pxColor = PixelBot.getColor(PixelBot.ctx.getImageData(3, 3, 1, 1).data, 0);
         var colorEl = qe('.color[style="background-color: ' + color + ';"]');
         if (!colorEl) {
-            console.log("Ошибка подбора цвета %c " + color, 'background:' + color + ';');
-            PixelBot.setState("Ошибка подбора цвета " + color);
+            console.log("ГЋГёГЁГЎГЄГ  ГЇГ®Г¤ГЎГ®Г°Г  Г¶ГўГҐГІГ  %c " + color, 'background:' + color + ';');
+            PixelBot.setState("ГЋГёГЁГЎГЄГ  ГЇГ®Г¤ГЎГ®Г°Г  Г¶ГўГҐГІГ  " + color);
             return PixelBot.draw();
         } else if (pxColor == color) {
-            console.log("совпал цвет " + x + "x" + y + "%c " + pxColor, 'background:' + pxColor + ';');
-            PixelBot.setState("пропускаю " + x + "x" + y + " совпал цвет");
+            console.log("Г±Г®ГўГЇГ Г« Г¶ГўГҐГІ " + x + "x" + y + "%c " + pxColor, 'background:' + pxColor + ';');
+            PixelBot.setState("ГЇГ°Г®ГЇГіГ±ГЄГ Гѕ " + x + "x" + y + " Г±Г®ГўГЇГ Г« Г¶ГўГҐГІ");
             return PixelBot.draw();
         }
         colorEl.click();
@@ -163,13 +163,13 @@ function PixelBot() {
         qe(".App__confirm button").click();
         var xy = document.querySelectorAll(".App__statistic .value")[1].textContent;
         console.log(x + "x" + y + "%c " + pxColor + " > %c " + color + " " + xy, 'background:' + pxColor + ';', 'background:' + color + ';');
-        PixelBot.setState("Поставил точку " + x + "x" + y + " " + xy);
+        PixelBot.setState("ГЏГ®Г±ГІГ ГўГЁГ« ГІГ®Г·ГЄГі " + x + "x" + y + " " + xy);
     };
 
     PixelBot.draw = function() {
         var px = 0;
         if (!PixelBot.pixs.length) {
-            PixelBot.setState("Точек нет");
+            PixelBot.setState("Г’Г®Г·ГҐГЄ Г­ГҐГІ");
         } else {
             if (PixelBot.pixs.length < 5) {
                 px = PixelBot.pixs.shift();
@@ -221,7 +221,7 @@ function PixelBot() {
 
     PixelBot.init = function() {
         PixelBot.inited = 1;
-        PixelBot.setState("запущен.");
+        PixelBot.setState("Г§Г ГЇГіГ№ГҐГ­.");
     };
 
     PixelBot.wait = setInterval(function() {
